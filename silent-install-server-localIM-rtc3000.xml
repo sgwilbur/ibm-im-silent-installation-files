@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agent-input clean='true' temporary='true' acceptLicense='true'>
+	<server>
+	<!--
+		<repository location='https://jazz.net/downloads/rational-team-concert/3.0/3.0/install-repository/rtc-offerings/repository/repository.config' />
+	-->
+		<repository location='http://server/software/ibm/rational/rtc/3.0-GA/jts-ccm-repo/repository.config' />
+		<repository location='.' temporary='true' />
+	</server>
+
+<!--- Shared Installation files locaiton: -->
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='C:\Apps\IMShared'/>
+
+<!-- Rollback files on/off -->
+	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
+
+<!--- Installation location:  -->
+	<profile id="Jazz Team Server" installLocation="C:\Apps\JazzTeamServer">
+
+		<!-- include all NL files -->
+		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>
+
+		<!-- override the default context root values with user-provided values -->
+		<data key='user.com.ibm.team.install.context-root-override' value='true'/>
+		<!-- user-provided context roots for each app -->
+<!--- Custom context roots: -->
+		<data key='user.com.ibm.team.install.jfs.app.jazz.context-root' value='jazz'/>
+		<data key='user.com.ibm.team.install.jfs.app.rtc.context-root'  value='rtc'/>
+	
+		<!-- override the default appserver options -->
+		<data key='user.com.ibm.team.install.jfs.appserver.user-override' value='true'/>
+		<!-- user-provided appserver options -->
+		<data key='user.com.ibm.team.install.jfs.appserver.noappserver.disable' value='true'/>
+		<data key='user.com.ibm.team.install.jfs.appserver.tomcat.disable' value='false'/>
+	
+		<!-- set bit-width to '32' or '64' -->
+		<!-- use to override platform detection:
+		<data key='user.com.ibm.team.install.jfs.bit-width' value='64'/>
+		-->
+	
+		<!-- set os-type for RCL token licensing to specify 'suse', 'redhat' or 'none' -->
+		<!-- use to override platform detection:
+		<data key='user.com.ibm.team.install.jfs.rcl.os-type' value='none'/>
+		-->
+	
+		<!-- disables aspects of install that cannot be simply zipped (e.g. start-menu shortcuts on windows) -->
+		<data key='user.com.ibm.team.install.zip.creation' value='true'/>
+
+	</profile>
+
+	<install>
+		<offering id='com.ibm.team.install.calm'/>
+		<offering id='com.ibm.team.install.jfs.app.product-rtc-standalone'/>
+	</install>
+</agent-input>
