@@ -13,7 +13,10 @@
 
 <!-- Rollback files on/off -->
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
-
+	
+<!-- Don't let Self-signed SSL stop you -->
+	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
+	
 <!--- Installation location:  -->
 	<profile id="Jazz Team Server" installLocation="C:\Apps\JazzTeamServer">
 
