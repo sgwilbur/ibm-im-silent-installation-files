@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agent-input clean='true' temporary='true' acceptLicense='true'>
+	<server>
+		<repository location='http://cux.kicks-ass.net/repos/CLM-3.0.1.0/' temporary='true' />
+	</server>
+
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IBMIMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
+
+	<profile id="Jazz Team Server - 3010" installLocation="/opt/IBM/jazz/3010/JazzTeamServer">
+
+		<!-- include all NL files -->
+		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>
+
+		<!-- override the default context root values with user-provided values -->
+		<data key='user.com.ibm.team.install.context-root-override' value='true'/>
+		<!-- user-provided context roots for each app -->
+		<data key='user.com.ibm.team.install.jfs.app.jazz.context-root' value='jts'/>
+		<data key='user.com.ibm.team.install.jfs.app.rtc.context-root' value='ccm'/>
+		<data key='user.com.ibm.team.install.jfs.app.rqm.context-root' value='qm'/>
+		<data key='user.com.ibm.team.install.jfs.app.rdm.context-root' value='rm'/>
+	
+		<!-- override the default appserver options -->
+		<data key='user.com.ibm.team.install.jfs.appserver.user-override' value='true'/>
+		<!-- user-provided appserver options -->
+		<data key='user.com.ibm.team.install.jfs.appserver.noappserver.disable' value='true'/>
+		<data key='user.com.ibm.team.install.jfs.appserver.tomcat.disable' value='false'/>
+	
+		<!-- set bit-width to '32' or '64' -->
+		<!-- use to override platform detection: -->
+		<data key='user.com.ibm.team.install.jfs.bit-width' value='64'/>
+		
+		<!-- set os-type for RCL token licensing to specify 'suse', 'redhat' or 'none' -->
+		<!-- use to override platform detection: -->
+		<data key='user.com.ibm.team.install.jfs.rcl.os-type' value='redhat'/>
+	
+		<!-- disables aspects of install that cannot be simply zipped (e.g. start-menu shortcuts on windows) -->
+		<data key='user.com.ibm.team.install.zip.creation' value='true'/>
+
+	</profile>
+
+	<install>
+		<!--
+		TODO: Add/remove feature identifiers from the 'features' attribute below to control which features will be installed.
+			jazz - Installs the Jazz Team Server
+			rtc - Installs the Change and Configuration Management app
+			rdm - Installs the Requirements Management app
+			rqm - Installs the Quality Management app
+			com.ibm.team.install.jfs.offering.feature.id.tomcat - Installs the Tomcat application server
+		-->
+		<offering features='jazz,rtc,rdm,rqm,com.ibm.team.install.jfs.offering.feature.id.tomcat' id='com.ibm.team.install.calm' />
+		
+		<offering id='com.ibm.team.install.jfs.app.product-rtc-standalone'/>
+	</install>
+</agent-input>
