@@ -5,7 +5,7 @@
 + author: Sean G Wilbur
 + tags: ibm, installation-manager, silent-install
 + created:  2011 Aug 26
-+ modified: 2011 Aug 26
++ modified: 2012 Jun 14
 
 ---
 
@@ -16,7 +16,7 @@ Installation Manager Silent Install
 
  *   Custom or old Context Roots (Namely for Jazz Migrations)
  *   Headless machines with no GUI
- *   Automated testing, laying down software to test against 
+ *   Automated testing, laying down multiple copies of different version software to test against on a single machine
 
  The files themselves are straighforward to construct once you have a handle on the required properties. These examples are all for Jazz based products, 
  you can see where they use local respositories rather than the jazz.net public repositories as I have not figured out how to resolve the authentication
@@ -26,27 +26,27 @@ Installation Manager Silent Install
 Usage
 ====
 
- Silient Install instructions:
+ Silient Install instructions:  
    http://publib.boulder.ibm.com/infocenter/install/v1r4/index.jsp?topic=/com.ibm.silentinstall12.doc/topics/r_silent_inst_cmd_arg.html
 
 TODO: Before running the installation command shown below, make sure this directory "installLocation" exists.
 
 To install the Jazz Team Server, run the command below from the directory containing this IM response file and the 'userinstc' IM executable:
 
-userinstc -dataLocation C:\tmp\silent-install\data -silent -showVerboseProgress -nosplash -input silent-install-server.xml
+    userinstc -dataLocation C:\tmp\silent-install\data -silent -showVerboseProgress -nosplash -input silent-install-server.xml
 
-IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -silent -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
+    IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -silent -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
 
-IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -mode wizard -input silent-install-server-localIM.xml
+    IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -mode wizard -input silent-install-server-localIM.xml
 
 
- ** dataLocation
+ ** dataLocation  
 		http://publib.boulder.ibm.com/infocenter/install/v1r4/index.jsp?topic=/com.ibm.silentinstall12.doc/topics/r_app_data_loc.html
 
-Windows Default:
+Windows Default:  
 C:\Program Files\IBM\IMShared
 
-Linux Default
+Linux Default  
 /opt/IBM/IMShared
 
 
