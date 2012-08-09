@@ -7,7 +7,10 @@
 	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IBMIMShared'/>
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
 
-	<profile id="Jazz Team Server - 3010" installLocation="/opt/IBM/jazz/3010/JazzTeamServer">
+  <!-- Don't let Self-signed SSL stop you -->
+  <preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
+
+	<profile id="Jazz Team Server" installLocation="/opt/IBM/jazz/3010/JazzTeamServer">
 
 		<!-- include all NL files -->
 		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>
