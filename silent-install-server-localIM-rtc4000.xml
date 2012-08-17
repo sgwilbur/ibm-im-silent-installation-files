@@ -1,48 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
-This is an IBM Installation Manager (IM) response file for command-line
-installation of the Jazz Team Server.
-
-Note that these instructions do not cover command-line invocation of IM
-operations used to maintain an installation (such as Update, Modify and
-Uninstall).  Instead, the use-case covered here assumes the goal is to
-produce an installation of the Jazz Team Server which can be zipped and
-relocated elsewhere on the filesystem, or to other machines with the same
-OS and architecture.
-
-Important!  Review the comments in this file with 'TODO' tags and make
-changes as necessary before invoking the installation command below.
-
-TODO: Make sure the version of IM installed on your system is not older than
-the one included in this download by running the following command.  This
-only needs to be done the first time you use this download.  If IM is not
-already installed on your system, this step may be skipped.
-  .\userinstc -silent -showVerboseProgress -nosplash
-
-TODO: Before running the installation command shown below, make sure this
-directory (where the installation will appear) does not already exist:
-  C:\tmp\silent-install
-
-To install the Jazz Team Server, run the command below from the directory
-containing this IM response file and the 'userinstc' IM executable:
-  .\userinstc -dataLocation C:\tmp\silent-install\data -silent -showVerboseProgress -nosplash -input silent-install-server.xml -acceptLicense
-
-If the installation is successful, the server will be installed here:
-  C:\tmp\silent-install\JazzTeamServer
-This directory structure can be safely zipped and moved to run the server
-from another filesystem path.
-
-Additional files will be created during installation here:
-  C:\tmp\silent-install\data
-  C:\tmp\silent-install\cache
-These are used to maintain IM state.  They may be discarded if there is
-no intention to perform additional IM operations on the installed server.
-
-TODO: Review the license agreement included in the 'license' directory
-at the top-level of the product media.  Use the -acceptLicense argument on
-the command line invocation shown above to indicate acceptance of the
-license agreement.
 -->
 <agent-input clean='true' temporary='true' acceptLicense='true'>
 	<server>
@@ -70,12 +27,6 @@ license agreement.
 		<!-- override the default context root values with user-provided values -->
 		<data key='user.com.ibm.team.install.context-root-override' value='true'/>
 		<!-- user-provided context roots for each app -->
-		<data key='user.com.ibm.team.install.jfs.app.jazz.context-root' value='jts'/>
-		<data key='user.com.ibm.team.install.jfs.app.rtc.context-root' value='ccm'/>
-		<data key='user.com.ibm.team.install.jfs.app.rqm.context-root' value='qm'/>
-		<data key='user.com.ibm.team.install.jfs.app.rdm.context-root' value='rm'/>
-		<data key='user.com.ibm.team.install.jfs.app.admin.context-root' value='admin'/>
-	
 		<!-- override the default appserver options -->
 		<data key='user.com.ibm.team.install.jfs.appserver.user-override' value='true'/>
 		<!-- user-provided appserver options -->
