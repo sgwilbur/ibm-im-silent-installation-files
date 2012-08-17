@@ -26,7 +26,7 @@ Installation Manager Silent Install
 Usage
 ====
 
- Silient Install instructions:  
+ Silent Install instructions:  
    http://publib.boulder.ibm.com/infocenter/install/v1r4/index.jsp?topic=/com.ibm.silentinstall12.doc/topics/r_silent_inst_cmd_arg.html
 
 TODO: Before running the installation command shown below, make sure this directory "installLocation" exists.
@@ -38,6 +38,8 @@ To install the Jazz Team Server, run the command below from the directory contai
     IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -silent -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
 
     IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -mode wizard -input silent-install-server-localIM.xml
+
+    
 
 
  ** dataLocation  
