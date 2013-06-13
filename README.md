@@ -16,7 +16,7 @@ Installation Manager Silent Install
 
  *   Custom or old Context Roots (Namely for Jazz Migrations)
  *   Headless machines with no GUI
- *   Automated testing, laying down multiple copies of different version software to test against on a single machine
+ *   Automated testing, laying down multiple copies of different version software to test against on a single machine (N.B. the use of the dataLocation switch is key here to avoid problems with a shared IMData directory and conflicts this may generate )
 
  The files themselves are straighforward to construct once you have a handle on the required properties. These examples are all for Jazz based products, 
  you can see where they use local respositories rather than the jazz.net public repositories as I have not figured out how to resolve the authentication
@@ -39,6 +39,7 @@ To install the Jazz Team Server, run the command below from the directory contai
 
     IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -mode wizard -input silent-install-server-localIM.xml
 
+sudo ./IBMIM -silent -acceptLicense -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
     
 
 
