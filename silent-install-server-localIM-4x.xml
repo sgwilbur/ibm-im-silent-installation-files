@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-This is an IBM Installation Manager (IM) response file for command-line
-installation of the Jazz Team Server.
-
-Note that these instructions do not cover command-line invocation of IM
-operations used to maintain an installation (such as Update, Modify and
-Uninstall).  Instead, the use-case covered here assumes the goal is to
-produce an installation of the Jazz Team Server which can be zipped and
-relocated elsewhere on the filesystem, or to other machines with the same
-OS and architecture.
-
 Important!  Review the comments in this file with 'TODO' tags and make
 changes as necessary before invoking the installation command below.
-
-TODO: Make sure the version of IM installed on your system is not older than
-the one included in this download by running the following command.  This
-only needs to be done the first time you use this download.  If IM is not
-already installed on your system, this step may be skipped.
-  .\userinstc -silent -showVerboseProgress -nosplash
 
 TODO: Before running the installation command shown below, make sure this
 directory (where the installation will appear) does not already exist:
@@ -44,17 +28,16 @@ at the top-level of the product media.  Use the -acceptLicense argument on
 the command line invocation shown above to indicate acceptance of the
 license agreement.
 -->
-<agent-input clean='true' temporary='true' acceptLicense='true'>
+<agent-input clean='true' temporary='true'>
 	<server>
 	<!--
 	<repository location='https://jazz.net/downloads/rational-team-concert/4.0/4.0/install-repository/rtc-offerings/repository/repository.config' />
 	-->
-		<repository location='http://cux.kicks-ass.net/repos/CLM-4.0.0.x/' />
-		<repository location='.' temporary='true' />
+		<repository location='https://vl4rl.dyndns.org/repos/CLMDM-4.0.3/' />
 	</server>
 
 <!--- Shared Installation files locaiton: -->
-	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/CLM4000/IMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/CLM403/IMShared'/>
 
 <!-- Rollback files on/off -->
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
@@ -62,7 +45,7 @@ license agreement.
 <!-- Don't let Self-signed SSL stop you -->
 	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
 	
-	<profile id="JazzTeamServer" installLocation="/opt/IBM/CLM4000/JazzTeamServer">
+	<profile id="JazzTeamServer" installLocation="/opt/IBM/CLM403/JazzTeamServer">
 
 		<!-- include all NL files -->
 		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>
@@ -115,6 +98,9 @@ license agreement.
 
 		<!-- RM -->
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rdm'/>
+
+    <!-- DM -->
+    <offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rsadm'/>
 		
 	</install>
 </agent-input>
