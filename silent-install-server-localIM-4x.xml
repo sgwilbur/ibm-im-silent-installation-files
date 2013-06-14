@@ -33,18 +33,22 @@ license agreement.
 	<!--
 	<repository location='https://jazz.net/downloads/rational-team-concert/4.0/4.0/install-repository/rtc-offerings/repository/repository.config' />
 	-->
+
+<!-- TODO: Point to local repo -->
 		<repository location='https://vl4rl.dyndns.org/repos/CLMDM-4.0.3/' />
 	</server>
 
-<!--- Shared Installation files locaiton: -->
+  <!--- Shared Installation files locaiton: -->
+<!-- TODO: Update to your shared directory -->
 	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/CLM403/IMShared'/>
 
-<!-- Rollback files on/off -->
+  <!-- Rollback files on/off -->
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
 	
-<!-- Don't let Self-signed SSL stop you -->
+  <!-- Don't let Self-signed SSL stop you -->
 	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
 	
+<!-- TODO: Update to your install directory -->
 	<profile id="JazzTeamServer" installLocation="/opt/IBM/CLM403/JazzTeamServer">
 
 		<!-- include all NL files -->
@@ -81,10 +85,10 @@ license agreement.
 	</profile>
 
 	<install>
-		<!--
+<!--
 		TODO: The lines below installs JTS and the trial activation licenses for all the apps.
-		These should only be dont together as JTS manages the licenses.
-		-->
+		These should only be done together as JTS manages the licenses.
+-->
 		<!-- JTS -->
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.jts'/>
 		<!-- Trial Licenses -->
