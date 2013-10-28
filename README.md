@@ -5,7 +5,7 @@
 + author: Sean G Wilbur
 + tags: ibm, installation-manager, silent-install
 + created:  2011 Aug 26
-+ modified: 2013 Jun 14
++ modified: 2013 Oct 28
 
 ---
 
@@ -33,18 +33,28 @@ TODO: Before running the installation command shown below, make sure this direct
 
 To install the Jazz Team Server, run the command below from the directory containing this IM response file and the 'userinstc' IM executable:
 
-    userinstc -dataLocation C:\tmp\silent-install\data -silent -showVerboseProgress -nosplash -input silent-install-server.xml
+Basic example on Unix/Linux, with root (or sudo) access, and using the default data location:
 
-    IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -silent -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
+    sudo ./IBMIM -silent -acceptLicense -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
 
-    IBMIMc.exe -dataLocation "C:\Documents and Settings\All Users\Application Data\IBM\Installation Manager" -mode wizard -input silent-install-server-localIM.xml
+Windows example of a non-root installation:	
 
-sudo ./IBMIM -silent -acceptLicense -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
-    
+	userinstc -dataLocation C:\tmp\silent-install\data -silent -showVerboseProgress -nosplash -input silent-install-server.xml
 
 
- ** dataLocation  
+
+ *Default dataLocation*
 		http://publib.boulder.ibm.com/infocenter/install/v1r4/index.jsp?topic=/com.ibm.silentinstall12.doc/topics/r_app_data_loc.html
+
+Linux/Unix
+
+    /var/ibm/InstallationManager
+
+Windows
+
+    ?
+
+*IM Shared Location:*
 
 Windows Default:  
 C:\Program Files\IBM\IMShared
