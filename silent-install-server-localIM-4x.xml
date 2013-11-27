@@ -35,12 +35,12 @@ license agreement.
 	-->
 
 <!-- TODO: Point to local repo -->
-		<repository location='https://vl4rl.dyndns.org/repos/CLMDM-4.0.3/' />
+		<repository location='https://vl4rl.dyndns.org/repos/CLMDM-4.0.4/' />
 	</server>
 
   <!--- Shared Installation files locaiton: -->
 <!-- TODO: Update to your shared directory -->
-	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/CLM403/IMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IMShared'/>
 
   <!-- Rollback files on/off -->
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
@@ -49,7 +49,7 @@ license agreement.
 	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
 	
 <!-- TODO: Update to your install directory -->
-	<profile id="JazzTeamServer" installLocation="/opt/IBM/CLM403/JazzTeamServer">
+	<profile id="JazzTeamServer" installLocation="/opt/IBM/JazzTeamServer">
 
 		<!-- include all NL files -->
 		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>
@@ -104,7 +104,8 @@ license agreement.
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rdm'/>
 
     <!-- DM -->
+<!--
     <offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rsadm'/>
-		
+-->		
 	</install>
 </agent-input>
