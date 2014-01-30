@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM                                   
+  © Copyright IBM Corporation 2000, 2012.                 |
+                                                                         
+  US Government Users Restricted Rights - Use, duplication or disclosure 
+  restricted by GSA ADP Schedule Contract with IBM Corp.               
+ -->
+ 
+<!--
+
+ See other examples here:
+	http://www-01.ibm.com/support/docview.wss?uid=swg27036106
+
+
+ Run Me: 
+
+	sudo ./IBMIM -silent -acceptLicense -showVerboseProgress -nosplash -input silent-install-server-localIM.xml
+
+-->
+ 
+<agent-input>
+
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IBMIMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.connectTimeout' value='30'/>
+	<preference name='com.ibm.cic.common.core.preferences.readTimeout' value='45'/>
+	<preference name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount' value='0'/>
+	<preference name='offering.service.repositories.areUsed' value='true'/>
+	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='false'/>
+	<preference name='com.ibm.cic.common.core.preferences.http.disablePreemptiveAuthentication' value='false'/>
+	<preference name='http.ntlm.auth.kind' value='NTLM'/>
+	<preference name='http.ntlm.auth.enableIntegrated.win32' value='true'/>
+	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='true'/>
+	<preference name='com.ibm.cic.common.core.preferences.keepFetchedFiles' value='false'/>
+	<preference name='PassportAdvantageIsEnabled' value='false'/>
+	<preference name='com.ibm.cic.common.core.preferences.searchForUpdates' value='false'/>
+	<preference name='com.ibm.cic.agent.ui.displayInternalVersion' value='false'/>
+	<preference name='com.ibm.cic.common.sharedUI.showErrorLog' value='true'/>
+	<preference name='com.ibm.cic.common.sharedUI.showWarningLog' value='true'/>
+	<preference name='com.ibm.cic.common.sharedUI.showNoteLog' value='true'/>
+
+
+	<server>
+		<repository location='http://vl4rl.dyndns.org/repos/RLKS-8.1.4/' />
+	</server>
+
+	<profile id='IBM Rational RLKS' installLocation='/opt/IBM/RLKS'>
+		<data key='eclipseLocation' value='/opt/IBM/RLKS'/>
+		<data key='user.import.profile' value='false'/>
+		<data key='cic.selector.nl' value='en'/>
+		
+		<!-- Provide the complete path to a valid license file in 'value' -->
+		<data 
+			key='user.com.ibm.rcl.rlks.licenseFilePath,com.ibm.rational.license.key.server.linux.x86' 
+			value='/license/licenseFile.lic'/>
+
+		<!-- Provide a valid port number in 'value' -->
+		<data 
+			key='user.com.ibm.rcl.rlks.portNumber,com.ibm.rational.license.key.server.linux.x86' 
+			value='27000'/>
+
+	</profile>
+
+	<install modify='false'>
+<!--
+	<offering features='agent_core,agent_jre' id='com.ibm.cic.agent'/>
+-->
+		<offering id='com.ibm.rational.license.key.server.linux.x86' profile='IBM Rational RLKS'
+			 features='com.ibm.rational.license.key.server.feature' installFixes='none'/>
+
+	</install>
+
+</agent-input>
