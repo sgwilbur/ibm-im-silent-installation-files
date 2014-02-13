@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+Review the comments in this file with 'TODO' tags and make
+changes as necessary before invoking the installation command below.
+
+-->
 <agent-input clean='true' temporary='true' acceptLicense='true'>
 	<server>
-		<repository location='http://cux.kicks-ass.net/repos/CLM-3.0.1.0/' temporary='true' />
+<!-- TODO: Update to your IM repo -->
+		<repository location='https://jazz.net/downloads/rational-team-concert/3.0.1.5/3.0.1.5/install-repository/rtc-offerings/repository/repository.config' temporary='true' />
 	</server>
 
-	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IBMIMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IMShared'/>
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
 
   <!-- Don't let Self-signed SSL stop you -->
   <preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
 
-	<profile id="Jazz Team Server" installLocation="/opt/IBM/jazz/3010/JazzTeamServer">
+	<profile id="Jazz Team Server" installLocation="/opt/IBM/CLM3015/JazzTeamServer">
 
 		<!-- include all NL files -->
 		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>

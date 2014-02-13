@@ -4,43 +4,17 @@
 Important!  Review the comments in this file with 'TODO' tags and make
 changes as necessary before invoking the installation command below.
 
-TODO: Before running the installation command shown below, make sure this
-directory (where the installation will appear) does not already exist:
-  C:\tmp\silent-install
-
-To install the Jazz Team Server, run the command below from the directory
-containing this IM response file and the 'userinstc' IM executable:
-  .\userinstc -dataLocation C:\tmp\silent-install\data -silent -showVerboseProgress -nosplash -input silent-install-server.xml -acceptLicense
-
-If the installation is successful, the server will be installed here:
-  C:\tmp\silent-install\JazzTeamServer
-This directory structure can be safely zipped and moved to run the server
-from another filesystem path.
-
-Additional files will be created during installation here:
-  C:\tmp\silent-install\data
-  C:\tmp\silent-install\cache
-These are used to maintain IM state.  They may be discarded if there is
-no intention to perform additional IM operations on the installed server.
-
-TODO: Review the license agreement included in the 'license' directory
-at the top-level of the product media.  Use the -acceptLicense argument on
-the command line invocation shown above to indicate acceptance of the
-license agreement.
 -->
 <agent-input clean='true' temporary='true'>
 	<server>
-	<!--
-	<repository location='https://jazz.net/downloads/rational-team-concert/4.0/4.0/install-repository/rtc-offerings/repository/repository.config' />
-	-->
 
 <!-- TODO: Point to local repo -->
-		<repository location='https://vl4rl.dyndns.org/repos/CLMDM-4.0.3/' />
+		<repository location='https://jazz.net/downloads/design-management/4.0.4/4.0.4/install-repository/repository.config' />
 	</server>
 
   <!--- Shared Installation files locaiton: -->
 <!-- TODO: Update to your shared directory -->
-	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/CLM403/IMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IMShared'/>
 
   <!-- Rollback files on/off -->
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
@@ -49,7 +23,7 @@ license agreement.
 	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
 	
 <!-- TODO: Update to your install directory -->
-	<profile id="JazzTeamServer" installLocation="/opt/IBM/CLM403/JazzTeamServer">
+	<profile id="JazzTeamServer" installLocation="/opt/IBM/CLM404/JazzTeamServer">
 
 		<!-- include all NL files -->
 		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>
@@ -86,14 +60,15 @@ license agreement.
 
 	<install>
 <!--
-		TODO: The lines below installs JTS and the trial activation licenses for all the apps.
-		These should only be done together as JTS manages the licenses.
+	TODO: The lines below installs JTS and the trial activation licenses for all the apps.
+	These should only be done together as JTS manages the licenses.
 -->
 		<!-- JTS -->
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.jts'/>
+
 		<!-- Trial Licenses -->
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.product-clm'/>
-		
+
 		<!-- CCM -->
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rtc'/>
 
@@ -103,8 +78,8 @@ license agreement.
 		<!-- RM -->
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rdm'/>
 
-    <!-- DM -->
-    <offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rsadm'/>
-		
+    	<!-- DM -->
+    	<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rsadm'/>
+
 	</install>
 </agent-input>
