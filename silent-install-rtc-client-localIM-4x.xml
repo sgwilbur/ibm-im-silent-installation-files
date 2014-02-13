@@ -11,7 +11,7 @@ changes as necessary before invoking the installation command below.
 			
 	<!--- Shared Installation files locaiton: -->
 <!-- TODO: Update to your shared directory -->
-	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/CLM403/IMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IMShared'/>
 
   <!-- Rollback files on/off -->
 	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
@@ -20,7 +20,7 @@ changes as necessary before invoking the installation command below.
 	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
 	
 <!-- TODO: Update to your install directory -->
-	<profile id="RTCClient" installLocation="/opt/IBM/CLM405ever/TeamConcert" />
+	<profile id="RTCClient" installLocation="/opt/IBM/CLM405/TeamConcert" />
 	
 	<install>
 		<offering profile="RTCClient" id='com.ibm.team.install.rtc.client.eclipse' />
