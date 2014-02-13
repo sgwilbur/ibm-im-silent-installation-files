@@ -1,55 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--The "acceptLicense" attribute has been deprecated. Use "-acceptLicense" command line option to accept license agreements.-->
+<!--
+Review the comments in this file with 'TODO' tags and make
+changes as necessary before invoking the installation command below.
+
+-->
 <agent-input acceptLicense='true'>
-<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IBMIMShared'/>
-<preference name='com.ibm.cic.common.core.preferences.connectTimeout' value='30'/>
-<preference name='com.ibm.cic.common.core.preferences.readTimeout' value='45'/>
-<preference name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount' value='0'/>
-<preference name='offering.service.repositories.areUsed' value='true'/>
-<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='false'/>
-<preference name='com.ibm.cic.common.core.preferences.http.disablePreemptiveAuthentication' value='false'/>
-<preference name='http.ntlm.auth.kind' value='NTLM'/>
-<preference name='http.ntlm.auth.enableIntegrated.win32' value='true'/>
-<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='true'/>
-<preference name='com.ibm.cic.common.core.preferences.keepFetchedFiles' value='false'/>
-<preference name='PassportAdvantageIsEnabled' value='false'/>
-<preference name='com.ibm.cic.common.core.preferences.searchForUpdates' value='false'/>
-<preference name='com.ibm.cic.agent.ui.displayInternalVersion' value='false'/>
-<preference name='com.ibm.cic.common.sharedUI.showErrorLog' value='true'/>
-<preference name='com.ibm.cic.common.sharedUI.showWarningLog' value='true'/>
-<preference name='com.ibm.cic.common.sharedUI.showNoteLog' value='true'/>
-<server>
-<repository location='/mnt/hgfs/repos/UCR-repo'/>
-</server>
-<profile id='IBM UrbanCode Platform' installLocation='/opt/IBM/UCRelease'>
-<data key='eclipseLocation' value='/opt/IBM/UCRelease'/>
-<data key='user.import.profile' value='false'/>
-<data key='cic.selector.os' value='linux'/>
-<data key='cic.selector.arch' value='x86_64'/>
-<data key='cic.selector.ws' value='gtk'/>
-<data key='user.com.ibm.urbancode.prereq.timestamp' value='20130924-0801-02'/>
-<data key='user.com.ibm.urbancode.appserver.tomcat.bin,com.ibm.urbancode.urelease' value='/opt/IBM/UCRelease/server/tomcat/bin/'/>
-<data key='user.com.ibm.urbancode.NoAppServer.WebApps.InstallLocation,com.ibm.urbancode.urelease' value='/opt/IBM/UCRelease/server/tomcat/webapps/'/>
-<data key='user.com.ibm.urbancode.appserver.tomcat.install,com.ibm.urbancode.urelease' value='true'/>
-<data key='user.com.ibm.urbancode.appserver.tomcat.port.https,com.ibm.urbancode.urelease' value='8443'/>
-<data key='user.com.ibm.urbancode.appserver.tomcat.ssl,com.ibm.urbancode.urelease' value='true'/>
-<data key='user.com.ibm.urbancode.NoAppServer.WebApps.WarName,com.ibm.urbancode.urelease' value='ROOT'/>
-<data key='user.com.ibm.urbancode.appserver.tomcat.port,com.ibm.urbancode.urelease' value='8080'/>
-<data key='user.com.ibm.urbancode.appserver.tomcat.host,com.ibm.urbancode.urelease' value='127.0.1.1'/>
-<data key='user.com.ibm.urbancode.release.license.server,com.ibm.urbancode.urelease' value='27000@localhost'/>
-<data key='user.com.ibm.urbancode.jdbc.jar,com.ibm.urbancode.urelease' value='/usr/share/java/mysql-connector-java-5.1.16.jar'/>
-<data key='user.com.ibm.urbancode.db.password,com.ibm.urbancode.urelease' value='@password@'/>
-<data key='user.com.ibm.urbancode.db.install.database.type,com.ibm.urbancode.urelease' value='mysql'/>
-<data key='user.com.ibm.urbancode.db.install,com.ibm.urbancode.urelease' value='Y'/>
-<data key='user.com.ibm.urbancode.db.connection,com.ibm.urbancode.urelease' value='testing'/>
-<data key='user.com.ibm.urbancode.db.schema,com.ibm.urbancode.urelease' value=''/>
-<data key='user.com.ibm.urbancode.db.url,com.ibm.urbancode.urelease' value='jdbc:mysql://localhost:3306/ibm_ucr'/>
-<data key='user.com.ibm.urbancode.db.use.existing,com.ibm.urbancode.urelease' value='N'/>
-<data key='user.com.ibm.urbancode.db.username,com.ibm.urbancode.urelease' value='ibm_uc'/>
-<data key='user.com.ibm.urbancode.db.driver,com.ibm.urbancode.urelease' value='com.mysql.jdbc.Driver'/>
-<data key='cic.selector.nl' value='en'/>
-</profile>
-<install modify='false'>
-<offering id='com.ibm.urbancode.urelease' version='6.0.0.UCRELO60-I20130820_0026' profile='IBM UrbanCode Platform' features='main.feature' installFixes='none'/>
-</install>
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IBMIMShared'/>
+	<preference name='com.ibm.cic.common.core.preferences.connectTimeout' value='30'/>
+	<preference name='com.ibm.cic.common.core.preferences.readTimeout' value='45'/>
+	<preference name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount' value='0'/>
+	<preference name='offering.service.repositories.areUsed' value='true'/>
+	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='false'/>
+	<preference name='com.ibm.cic.common.core.preferences.http.disablePreemptiveAuthentication' value='false'/>
+	<preference name='http.ntlm.auth.kind' value='NTLM'/>
+	<preference name='http.ntlm.auth.enableIntegrated.win32' value='true'/>
+	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='true'/>
+	<preference name='com.ibm.cic.common.core.preferences.keepFetchedFiles' value='false'/>
+	<preference name='PassportAdvantageIsEnabled' value='false'/>
+	<preference name='com.ibm.cic.common.core.preferences.searchForUpdates' value='false'/>
+	<preference name='com.ibm.cic.agent.ui.displayInternalVersion' value='false'/>
+	<preference name='com.ibm.cic.common.sharedUI.showErrorLog' value='true'/>
+	<preference name='com.ibm.cic.common.sharedUI.showWarningLog' value='true'/>
+	<preference name='com.ibm.cic.common.sharedUI.showNoteLog' value='true'/>
+	
+	<server>
+<!-- TODO: Update to your IM repo -->
+		<repository location='/mnt/hgfs/repos/UCR-repo'/>
+	</server>
+
+	<profile id='IBM UrbanCode Platform' installLocation='/opt/IBM/UCRelease'>
+		<data key='eclipseLocation' value='/opt/IBM/UCRelease'/>
+		
+		<data key='user.import.profile' value='false'/>
+		<data key='cic.selector.os' value='linux'/>
+		<data key='cic.selector.arch' value='x86_64'/>
+		<data key='cic.selector.ws' value='gtk'/>
+		<data key='user.com.ibm.urbancode.prereq.timestamp' value='20130924-0801-02'/>
+		<data key='user.com.ibm.urbancode.appserver.tomcat.bin,com.ibm.urbancode.urelease' value='/opt/IBM/UCRelease/server/tomcat/bin/'/>
+		<data key='user.com.ibm.urbancode.NoAppServer.WebApps.InstallLocation,com.ibm.urbancode.urelease' value='/opt/IBM/UCRelease/server/tomcat/webapps/'/>
+		<data key='user.com.ibm.urbancode.appserver.tomcat.install,com.ibm.urbancode.urelease' value='true'/>
+		<data key='user.com.ibm.urbancode.appserver.tomcat.port.https,com.ibm.urbancode.urelease' value='8443'/>
+		<data key='user.com.ibm.urbancode.appserver.tomcat.ssl,com.ibm.urbancode.urelease' value='true'/>
+		<data key='user.com.ibm.urbancode.NoAppServer.WebApps.WarName,com.ibm.urbancode.urelease' value='ROOT'/>
+		<data key='user.com.ibm.urbancode.appserver.tomcat.port,com.ibm.urbancode.urelease' value='8080'/>
+		<data key='user.com.ibm.urbancode.appserver.tomcat.host,com.ibm.urbancode.urelease' value='127.0.1.1'/>
+		<data key='user.com.ibm.urbancode.release.license.server,com.ibm.urbancode.urelease' value='27000@localhost'/>
+		<data key='user.com.ibm.urbancode.jdbc.jar,com.ibm.urbancode.urelease' value='/usr/share/java/mysql-connector-java-5.1.16.jar'/>
+		<data key='user.com.ibm.urbancode.db.password,com.ibm.urbancode.urelease' value='@password@'/>
+		<data key='user.com.ibm.urbancode.db.install.database.type,com.ibm.urbancode.urelease' value='mysql'/>
+		<data key='user.com.ibm.urbancode.db.install,com.ibm.urbancode.urelease' value='Y'/>
+		<data key='user.com.ibm.urbancode.db.connection,com.ibm.urbancode.urelease' value='testing'/>
+		<data key='user.com.ibm.urbancode.db.schema,com.ibm.urbancode.urelease' value=''/>
+		<data key='user.com.ibm.urbancode.db.url,com.ibm.urbancode.urelease' value='jdbc:mysql://localhost:3306/ibm_ucr'/>
+		<data key='user.com.ibm.urbancode.db.use.existing,com.ibm.urbancode.urelease' value='N'/>
+		<data key='user.com.ibm.urbancode.db.username,com.ibm.urbancode.urelease' value='ibm_uc'/>
+		<data key='user.com.ibm.urbancode.db.driver,com.ibm.urbancode.urelease' value='com.mysql.jdbc.Driver'/>
+		<data key='cic.selector.nl' value='en'/>
+	</profile>
+	
+	<install modify='false'>
+		<offering id='com.ibm.urbancode.urelease' version='6.0.0.UCRELO60-I20130820_0026' profile='IBM UrbanCode Platform' features='main.feature' installFixes='none'/>
+	</install>
 </agent-input>

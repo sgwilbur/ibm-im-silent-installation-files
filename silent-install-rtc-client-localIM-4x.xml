@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!--            
+Review the comments in this file with 'TODO' tags and make
+changes as necessary before invoking the installation command below.
+-->
 <agent-input clean='true' temporary='true'>
-
 	<server>
 <!-- TODO: Update to your IM repo -->
-		<repository location='/tomb/repos/CLMDM-4.0.3' />
+		<repository location='https://jazz.net/downloads/clm/4.0.5/4.0.5/install-repository/clm-offerings/repository/repository.config' />
 	</server>
 			
 	<!--- Shared Installation files locaiton: -->
@@ -18,7 +20,7 @@
 	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
 	
 <!-- TODO: Update to your install directory -->
-	<profile id="RTCClient" installLocation="/opt/IBM/CLM403/TeamConcert" />
+	<profile id="RTCClient" installLocation="/opt/IBM/CLM405ever/TeamConcert" />
 	
 	<install>
 		<offering profile="RTCClient" id='com.ibm.team.install.rtc.client.eclipse' />
