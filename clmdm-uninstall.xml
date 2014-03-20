@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+sudo ./tools/imcl input ~/CBA-files/rtc-install.xml -log ~/CBA-files/rtc-install.log
+-->
+<agent-input clean='true' temporary='true'>
+	<server>
+<!-- TODO: Point to local repo -->
+		<repository location='http://gura:8000/CLM-4.0.5/' />
+	</server>
+
+  <!--- Shared Installation files locaiton: -->
+<!-- TODO: Update to your shared directory -->
+	<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='/opt/IBM/IMShared'/>
+
+  <!-- Rollback files on/off -->
+	<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='false'/>
+	
+  <!-- Don't let Self-signed SSL stop you -->
+	<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='true'/>
+	
+<!-- TODO: Update to your install directory -->
+	<profile id="JazzTeamServer" installLocation="/opt/IBM/JazzTeamServer">
+
+		<!-- include all NL files -->
+		<data key='cic.selector.nl' value='en,fr,it,zh,ru,zh_TW,zh_HK,de,ja,pl,es,cs,hu,ko,pt_BR'/>
+
+		<!-- override the default context root values with user-provided values -->
+		<data key='user.com.ibm.team.install.context-root-override' value='true'/>
+		<!-- user-provided context roots for each app -->
+		<data key='user.com.ibm.team.install.jfs.app.jazz.context-root' value='jts'/>
+		<data key='user.com.ibm.team.install.jfs.app.rtc.context-root' value='ccm'/>
+		<data key='user.com.ibm.team.install.jfs.app.rqm.context-root' value='qm'/>
+		<data key='user.com.ibm.team.install.jfs.app.rdm.context-root' value='rm'/>
+		<data key='user.com.ibm.team.install.jfs.app.admin.context-root' value='admin'/>
+	
+		<!-- override the default appserver options -->
+		<data key='user.com.ibm.team.install.jfs.appserver.user-override' value='true'/>
+		<!-- user-provided appserver options -->
+		<data key='user.com.ibm.team.install.jfs.appserver.noappserver.disable' value='true'/>
+		<data key='user.com.ibm.team.install.jfs.appserver.tomcat.disable' value='false'/>
+		<data key='user.com.ibm.team.install.zip.creation' value='true'/>
+
+	</profile>
+
+	<uninstall>
+<!--
+		TODO: Remove anything you don't have installed, this is not required, this will not do anything
+		items not installed, but will generate warnings that it cannot find the feature.
+-->
+		<!-- JTS -->
+		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.jts'/>
+		
+		<!-- Trial Licenses -->
+		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.product-clm'/>
+		
+		<!-- CCM -->
+		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rtc'/>
+
+		<!-- QM -->
+		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rqm'/>
+
+		<!-- RM -->
+		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rdm'/>
+
+   	 	<!-- DM -->
+    	<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rsadm'/>
+		
+	</uninstall>
+</agent-input>
