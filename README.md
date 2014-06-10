@@ -5,11 +5,11 @@
 + author: Sean G Wilbur
 + tags: ibm, installation-manager, silent-install
 + created:  2011 Aug 26
-+ modified: 2013 Oct 28
++ modified: 2014 June 10
 
 ---
 
-Installation Manager Silent Install
+#### Installation Manager Silent Install
 =========
 
  There are many cases when you may need to use a silent installation of one or more products. A few that I run into again and again are the need to install:
@@ -22,8 +22,11 @@ Installation Manager Silent Install
  you can see where they use local respositories rather than the jazz.net public repositories as I have not figured out how to resolve the authentication
  in silent mode. Once that issue is resolved the only requirement will be a copy of the Installation Manager.
 
+#### Installation Manager Version Compatability
 
-Usage
+I don't claim or even try to test these with different or older versions, check the available branches named according to version for any previous iterations.
+
+#### Usage
 ====
 
  Silent Install instructions:  
@@ -62,9 +65,13 @@ C:\Program Files\IBM\IMShared
 Linux Default  
 /opt/IBM/IMShared
 
+#### Public IBM Rational Repositories
 
----
+These require authentication with an IBM ID but they are exposed publically on the internet. Check each product directory for a README with a list of public directories I may have included.
 
-Reference:
-----------
- * [Installation Manager Information Center 1.4.x](http://publib.boulder.ibm.com/infocenter/install/v1r4/index.jsp)
+
+#### Reference:
+
+ * [IBM Installation Manager Support Home]()
+ * [IBM Installation Manager 1.7 Information Center](http://pic.dhe.ibm.com/infocenter/install/v1r7/topic/com.ibm.cic.agent.ui.doc/helpindex_imic.html)
+ * [ibm.com - Installation Manager and Packaging Utility download links](http://www-01.ibm.com/support/docview.wss?uid=swg27025142)
