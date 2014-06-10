@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/opt/IBM/IBMIMShared'/>
+  </variables>
+  <server>
+    <repository location='http://172.16.62.1:8000/repos/rational/test_virtualization_server/8.5.1.0/'/>
+  </server>
+  <profile id='IBM Rational Test Control Panel' installLocation='/opt/IBM/RationalTestControlPanel'>
+    <data key='eclipseLocation' value='/opt/IBM/RationalTestControlPanel'/>
+    <data key='user.import.profile' value='false'/>
+    <data key='cic.selector.os' value='linux'/>
+    <data key='cic.selector.arch' value='x86_64'/>
+    <data key='cic.selector.ws' value='gtk'/>
+    <data key='cic.selector.nl' value='en'/>
+    <data key='user.help.option' value='remote'/>
+    <data key='user.help.url' value=''/>
+    <data key='user.workspacePath,com.ibm.rational.rtcp.offering' value='/var/rtcp'/>
+    <data key='user.networkPort,com.ibm.rational.rtcp.offering' value='7819'/>
+    <data key='user.oslcHostname,com.ibm.rational.rtcp.offering' value='http://ubuntu'/>
+    <data key='user.defaultDomain,com.ibm.rational.rtcp.offering' value=''/>
+    <data key='user.securityConfig,com.ibm.rational.rtcp.offering' value='#RTCP security configuration&#10;#Mon Jun 09 21:16:10 PDT 2014&#10;credentialsStore=FILE&#10;'/>
+  </profile>
+  <install modify='false'>
+    <!-- IBM® Rational® Test Control Panel 8.5.1 -->
+    <offering profile='IBM Rational Test Control Panel' id='com.ibm.rational.rtcp.offering' version='8.5.1.I20131108_1102' features='main.feature' installFixes='none'/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+  <preference name='com.ibm.cic.common.core.preferences.connectTimeout' value='30'/>
+  <preference name='com.ibm.cic.common.core.preferences.readTimeout' value='45'/>
+  <preference name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount' value='0'/>
+  <preference name='offering.service.repositories.areUsed' value='true'/>
+  <preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='false'/>
+  <preference name='com.ibm.cic.common.core.preferences.http.disablePreemptiveAuthentication' value='false'/>
+  <preference name='http.ntlm.auth.kind' value='NTLM'/>
+  <preference name='http.ntlm.auth.enableIntegrated.win32' value='true'/>
+  <preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='true'/>
+  <preference name='com.ibm.cic.common.core.preferences.keepFetchedFiles' value='false'/>
+  <preference name='PassportAdvantageIsEnabled' value='false'/>
+  <preference name='com.ibm.cic.common.core.preferences.searchForUpdates' value='false'/>
+  <preference name='com.ibm.cic.agent.ui.displayInternalVersion' value='false'/>
+  <preference name='com.ibm.cic.common.sharedUI.showErrorLog' value='true'/>
+  <preference name='com.ibm.cic.common.sharedUI.showWarningLog' value='true'/>
+  <preference name='com.ibm.cic.common.sharedUI.showNoteLog' value='true'/>
+</agent-input>
