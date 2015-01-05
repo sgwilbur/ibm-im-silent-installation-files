@@ -6,7 +6,8 @@ sudo ./tools/imcl input ~/CBA-files/rtc-install.xml -log ~/CBA-files/rtc-install
 <agent-input clean='true' temporary='true'>
 	<server>
 <!-- TODO: Point to local repo -->
-		<repository location='http://gura:8000/CLM-4.0.5/' />
+		<repository location='https://jazz.net/downloads/clm/5.0.1/5.0.1/install-repository/clm-offerings/repository/repository.config' />
+		<repository location='https://jazz.net/downloads/design-management/5.0.1/5.0.1/install-repository/repository.config' />
 	</server>
 
   <!--- Shared Installation files locaiton: -->

@@ -3,6 +3,9 @@
 
 These will require your jazz.net/IBM ID to login.
 
+ * 5.0.1.0
+   * [CLM https://jazz.net/downloads/clm/5.0.1/5.0.1/install-repository/clm-offerings/repository/repository.config](https://jazz.net/downloads/clm/5.0.1/5.0.1/install-repository/clm-offerings/repository/repository.config)
+
  * 5.0.0.0
   * [CLM https://jazz.net/downloads/clm/5.0/5.0/install-repository/clm-offerings/repository/repository.config](https://jazz.net/downloads/clm/5.0/5.0/install-repository/clm-offerings/repository/repository.config)
   

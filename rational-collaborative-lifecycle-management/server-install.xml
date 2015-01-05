@@ -2,12 +2,17 @@
 <!--
 Review the comments in this file with 'TODO' tags and make
 changes as necessary before invoking the installation command below.
+
+ Run Me: 
+	sudo ./IBMIM -silent -acceptLicense -showVerboseProgress -nosplash -input server-install.xml
+
 -->
 <agent-input clean='true' temporary='true'>
 	<server>
 
 <!-- TODO: Point to local repo -->
-		<repository location='https://jazz.net/downloads/clm/4.0.5/4.0.5/install-repository/clm-offerings/repository/repository.config' />
+		<repository location='https://jazz.net/downloads/clm/5.0.1/5.0.1/install-repository/clm-offerings/repository/repository.config' />
+		<repository location='https://jazz.net/downloads/design-management/5.0.1/5.0.1/install-repository/repository.config' />
 	</server>
 
   <!--- Shared Installation files locaiton: -->
@@ -76,8 +81,8 @@ changes as necessary before invoking the installation command below.
 		<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rdm'/>
 
     	<!-- DM -->
-<!--
+
     	<offering profile="JazzTeamServer" id='com.ibm.team.install.jfs.app.rsadm'/>
--->		
+
 	</install>
 </agent-input>

@@ -42,7 +42,7 @@ changes as necessary before invoking the installation command below.
 		<data key='user.import.profile' value='false'/>
 		<data key='cic.selector.nl' value='en'/>
 		
-<!-- TODO: Provide the complete path to a valid license file in 'value' -->
+<!-- TODO: Provide the complete path to a valid license file in 'value' -->w
 		<data key='user.com.ibm.rcl.rlks.licenseFilePath,com.ibm.rational.license.key.server.linux.x86' 
 			value='/license/licenseFile.lic'/>
 
