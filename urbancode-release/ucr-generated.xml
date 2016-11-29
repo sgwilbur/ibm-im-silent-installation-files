@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/opt/IBM/IBMIMShared'/>
+  </variables>
+  <server>
+    <repository location='http://172.16.62.1:8000/repos/urbancode/release/6.1.1.5/'/>
+  </server>
+  <profile id='IBM UrbanCode Platform' installLocation='/opt/IBM/UCRelease'>
+    <data key='eclipseLocation' value='/opt/IBM/UCRelease'/>
+    <data key='user.import.profile' value='false'/>
+    <data key='cic.selector.os' value='linux'/>
+    <data key='cic.selector.arch' value='x86_64'/>
+    <data key='cic.selector.ws' value='gtk'/>
+    <data key='user.com.ibm.urbancode.prereq.timestamp' value='20150715-1552-10'/>
+    <data key='user.com.ibm.urbancode.urelease.default.language,com.ibm.urbancode.urelease' value='en_US'/>
+    <data key='user.com.ibm.urbancode.NoAppServer.WebApps.WarName,com.ibm.urbancode.urelease' value='ROOT'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.install,com.ibm.urbancode.urelease' value='true'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.fips,com.ibm.urbancode.urelease' value='false'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.shutdown.port,com.ibm.urbancode.urelease' value='8005'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.ssl,com.ibm.urbancode.urelease' value='true'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.host,com.ibm.urbancode.urelease' value='172.16.62.132'/>
+    <data key='user.com.ibm.urbancode.NoAppServer.WebApps.InstallLocation,com.ibm.urbancode.urelease' value='/opt/IBM/UCRelease/server/tomcat/webapps/'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.bin,com.ibm.urbancode.urelease' value='/opt/IBM/UCRelease/server/tomcat/bin/'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.port,com.ibm.urbancode.urelease' value='80'/>
+    <data key='user.com.ibm.urbancode.appserver.tomcat.port.https,com.ibm.urbancode.urelease' value='443'/>
+    <data key='user.com.ibm.urbancode.release.license.server,com.ibm.urbancode.urelease' value='27000@localhost'/>
+    <data key='user.com.ibm.urbancode.urelease.mail.sender,com.ibm.urbancode.urelease' value=''/>
+    <data key='user.com.ibm.urbancode.urelease.mail.smtp.password,com.ibm.urbancode.urelease' value=''/>
+    <data key='user.com.ibm.urbancode.urelease.mail.smtp.port,com.ibm.urbancode.urelease' value=''/>
+    <data key='user.com.ibm.urbancode.urelease.mail.smtp.user,com.ibm.urbancode.urelease' value=''/>
+    <data key='user.com.ibm.urbancode.urelease.mail.smtp.secure,com.ibm.urbancode.urelease' value='false'/>
+    <data key='user.com.ibm.urbancode.urelease.mail.smtp.host,com.ibm.urbancode.urelease' value=''/>
+    <data key='user.com.ibm.urbancode.db.url,com.ibm.urbancode.urelease' value='jdbc:mysql://localhost:3306/ibm_ucr'/>
+    <data key='user.com.ibm.urbancode.db.install.database.type,com.ibm.urbancode.urelease' value='mysql'/>
+    <data key='user.com.ibm.urbancode.table.created,com.ibm.urbancode.urelease' value=''/>
+    <data key='user.com.ibm.urbancode.db.username,com.ibm.urbancode.urelease' value='ibm_uc'/>
+    <data key='user.com.ibm.urbancode.db.password,com.ibm.urbancode.urelease' value='Rat1onal'/>
+    <data key='user.com.ibm.urbancode.db.schema,com.ibm.urbancode.urelease' value=''/>
+    <data key='user.com.ibm.urbancode.db.connection,com.ibm.urbancode.urelease' value='testing'/>
+    <data key='user.com.ibm.urbancode.db.install,com.ibm.urbancode.urelease' value='Y'/>
+    <data key='user.com.ibm.urbancode.jdbc.jar,com.ibm.urbancode.urelease' value='/usr/share/java/mysql-connector-java.jar'/>
+    <data key='user.com.ibm.urbancode.db.driver,com.ibm.urbancode.urelease' value='com.mysql.jdbc.Driver'/>
+    <data key='cic.selector.nl' value='en'/>
+  </profile>
+  <install modify='false'>
+    <!-- IBM UrbanCode Release 6.1.1.5 -->
+    <offering profile='IBM UrbanCode Platform' id='com.ibm.urbancode.urelease' version='6.1.1005.UCRELO6115-I20150511_1224' features='main.feature' installFixes='none'/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+  <preference name='com.ibm.cic.common.core.preferences.connectTimeout' value='30'/>
+  <preference name='com.ibm.cic.common.core.preferences.readTimeout' value='45'/>
+  <preference name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount' value='0'/>
+  <preference name='offering.service.repositories.areUsed' value='true'/>
+  <preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='false'/>
+  <preference name='com.ibm.cic.common.core.preferences.http.disablePreemptiveAuthentication' value='false'/>
+  <preference name='http.ntlm.auth.kind' value='NTLM'/>
+  <preference name='http.ntlm.auth.enableIntegrated.win32' value='true'/>
+  <preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='true'/>
+  <preference name='com.ibm.cic.common.core.preferences.keepFetchedFiles' value='false'/>
+  <preference name='PassportAdvantageIsEnabled' value='false'/>
+  <preference name='com.ibm.cic.common.core.preferences.searchForUpdates' value='false'/>
+  <preference name='com.ibm.cic.agent.ui.displayInternalVersion' value='false'/>
+  <preference name='com.ibm.cic.common.sharedUI.showErrorLog' value='true'/>
+  <preference name='com.ibm.cic.common.sharedUI.showWarningLog' value='true'/>
+  <preference name='com.ibm.cic.common.sharedUI.showNoteLog' value='true'/>
+</agent-input>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='/opt/IBM/IMShared'/>
+  </variables>
+  <server>
+    <repository location='http://192.168.1.65:8000/repos/websphere/8.5.5.0/'/>
+  </server>
+  <profile id='Web Server Plug-ins for IBM WebSphere Application Server V8.5' installLocation='/opt/IBM/WebSphere/Plugins'>
+    <data key='cic.selector.arch' value='x86'/>
+  </profile>
+  <uninstall>
+    <offering profile='Web Server Plug-ins for IBM WebSphere Application Server V8.5' id='com.ibm.websphere.PLG.v85' version='8.5.0.20120501_1108'/>
+  </uninstall>
+  <profile id='IBM HTTP Server V8.5' installLocation='/opt/IBM/HTTPServer'>
+    <data key='cic.selector.arch' value='x86'/>
+    <data key='user.ihs.http.server.service.name' value='none'/>
+    <data key='user.ihs.httpPort' value='80'/>
+    <data key='user.ihs.installHttpService' value='false'/>
+  </profile>
+  <uninstall>
+    <offering profile='IBM HTTP Server V8.5' id='com.ibm.websphere.IHS.v85' version='8.5.5009.20160225_0435'/>
+  </uninstall>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+</agent-input>
