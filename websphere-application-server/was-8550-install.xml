@@ -1,4 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!--
+  sudo /opt/IBM/InstallationManager/eclipse/tools/imcl -acceptLicense -showVerboseProgress input was-install-record.xml
+
+-->
 <agent-input>
   <variables>
     <variable name='sharedLocation' value='/opt/IBM/Shared'/>
@@ -11,7 +15,10 @@
   </profile>
   <install>
     <!-- IBM WebSphere Application Server Network Deployment 8.5.5.0 -->
-    <offering profile='IBM WebSphere Application Server V8.5' id='com.ibm.websphere.ND.v85' version='8.5.5000.20130514_1044' features='core.feature,ejbdeploy,thinclient,embeddablecontainer,com.ibm.sdk.6_64bit,samples'/>
+    <offering profile='IBM WebSphere Application Server V8.5'
+              id='com.ibm.websphere.ND.v85'
+              version='8.5.5000.20130514_1044'
+              features='core.feature,ejbdeploy,thinclient,embeddablecontainer,com.ibm.sdk.6_64bit,samples'/>
   </install>
   <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
 </agent-input>
